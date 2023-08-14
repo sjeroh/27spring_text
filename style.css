@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{margin: 0; padding: 0;}
+
+section.five{
+  position: relative;
+  background-color: rgb(15,15,15);
+  color: rgb(232,239,243);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.text_wrap{
+}
+
+.text{
+  position: absolute;
+  font-size: 200px;
+  font-weight: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  rotate: -15deg;
+  
+}
+
+.text_wrap span{
+  font-family: 'Russo One', sans-serif;
+}
+
+.base-anim{
+  animation: up_down 2.5s ease-in-out infinite alternate,
+  rotate 5s ease-in-out infinite alternate
+  ;
+}
+
+
+@keyframes up_down {
+  0%{
+    transform: translate(-50%, -50%) translateY(-50px);
+  }
+  100%{
+    transform: translate(-50%, -50%) translateY(50px);
+  }
+  
+}
+
+@keyframes rotate {
+  0%{
+    rotate:-15deg;
+  }
+  100%{
+    rotate:15deg;
+    
+  }
+}
+
+.outline-text{
+  color: transparent;
+  -webkit-text-stroke: 1px  rgb(232,239,243) ;
+}
